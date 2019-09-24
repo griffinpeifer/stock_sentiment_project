@@ -13,6 +13,7 @@ import bs4 as bs
 from selenium import webdriver
 import dash_bootstrap_components as dbc
 
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -289,7 +290,7 @@ def top_5_links(input_data):
             stock_df2 = table[1]
             stock_df2 = stock_df2.rename(columns={0: 2, 1: 3})
             stock_df = stock_df1.join(stock_df2, how="outer")
-            stock_df = stock_df.rename(columns={0: "Stock Details", 1: "Value", 2: "Stock Details", 3: "Value"})
+            stock_df = stock_df.rename(columns={0: "Stock Details", 1: "Value", 2: "Stock Details ", 3: "Value "})
             table1 = dbc.Table.from_dataframe(stock_df, striped=True, bordered=True, hover=True)
             return table1
         else:
@@ -299,7 +300,7 @@ def top_5_links(input_data):
             stock_df2 = table[1]
             stock_df2 = stock_df2.rename(columns={0: 2, 1: 3})
             stock_df = stock_df1.join(stock_df2, how="outer")
-            stock_df = stock_df.rename(columns={0: "Stock Details", 1: "Value", 2: "Stock Details", 3: "Value"})
+            stock_df = stock_df.rename(columns={0: "Stock Details", 1: "Value", 2: "Stock Details ", 3: "Value "})
             table1 = dbc.Table.from_dataframe(stock_df, striped=True, bordered=True, hover=True)
             return table1
     except:
@@ -384,6 +385,6 @@ def top_5_links(input_data):
     except:
         pass
 
-
 if __name__ == '__main__':
     app.run_server(debug=True)
+
