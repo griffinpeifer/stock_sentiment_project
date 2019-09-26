@@ -1,1 +1,1 @@
-web: gunicorn app:app -b xx.xxx.xxx.xx:8050
+web: gunicorn app:app
