@@ -80,5 +80,5 @@ webencodings==0.5.1
 Werkzeug==0.15.6
 widgetsnbextension==3.5.1
 wrapt==1.11.2
-gunicorn==19.0.0
+gunicorn==19.5.0
 
